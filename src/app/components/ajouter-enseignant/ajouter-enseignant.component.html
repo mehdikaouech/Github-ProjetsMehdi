@@ -1,0 +1,72 @@
+<div class="section_background parallax-window" data-parallax="scroll"
+   data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+<div class="container">
+   <div class="form-group">
+
+      <p> <img src="assets/images/enseig.png" alt="">
+      </p>
+   </div>
+   <div class="row">
+      <div class="col ">
+         <form [formGroup]="enseignantForm" >
+            <div class="counter_form_title">{{title}}-Enseignant </div>
+            <div class="form-group">
+  
+
+            </div>
+            <input type="text" class="counter_input" id="nom" placeholder="Nom:" [(ngModel)]="user.nom" formControlName="nom"
+             >
+               <div *ngIf="enseignantForm.controls['nom'].invalid && (enseignantForm.controls['nom'].dirty || enseignantForm.controls['nom'].touched)">
+                  <div  style="color: rgb(11, 145, 179);" *ngIf="enseignantForm.controls['nom'].invalid && (enseignantForm.controls['nom'].dirty || enseignantForm.controls['nom'].touched)">
+            
+                 Saisir le nom de l'Enseignant
+                     </div>
+            </div>
+            <input type="text" class="counter_input" id="prenom" placeholder="Prénom:" [(ngModel)]="user.prenom" formControlName="prenom"
+             >
+               <div *ngIf="enseignantForm.controls['prenom'].invalid && (enseignantForm.controls['prenom'].dirty || enseignantForm.controls['prenom'].touched)">
+                  <div  style="color: rgb(11, 145, 179);" *ngIf="enseignantForm.controls['prenom'].invalid && (enseignantForm.controls['prenom'].dirty || enseignantForm.controls['prenom'].touched)">
+            
+                 Saisir le prenom de l'Enseignant
+                     </div>
+                  </div>
+               <input type="number"  class="counter_input" name="cin" id="cin"  required placeholder="Cin"  formControlName="cin" [(ngModel)]="user.cin" 
+               >   <div *ngIf="enseignantForm.controls['cin'].invalid && (enseignantForm.controls['cin'].dirty || enseignantForm.controls['cin'].touched)">
+                  <div  style="color: rgb(11, 145, 179);" *ngIf="enseignantForm.controls['cin'].invalid && (enseignantForm.controls['cin'].dirty || enseignantForm.controls['cin'].touched)">
+            
+                 Vérifier le  Numéro du carte d'identité  
+                     </div>
+                     
+            </div>
+               <input type="email" class="counter_input" name="email" id="email" required placeholder="mail@serveur.com"  formControlName="email" [(ngModel)]="user.email" 
+               >   <div *ngIf="enseignantForm.controls['email'].invalid && (enseignantForm.controls['email'].dirty || enseignantForm.controls['email'].touched)">
+                  <div  style="color: rgb(11, 145, 179);" *ngIf="enseignantForm.controls['email'].invalid && (enseignantForm.controls['email'].dirty || enseignantForm.controls['email'].touched)">
+            
+                    L'Email est Obligatoire
+                     </div>
+            </div>
+
+  <input type="password" class="counter_input"  id="pwd" placeholder="Mot De Passe:"  required formControlName="pwd" [(ngModel)]="user.pwd" >
+<div *ngIf="enseignantForm.controls['pwd'].invalid && (enseignantForm.controls['pwd'].dirty || enseignantForm.controls['pwd'].touched)">
+   <div  style="color: rgb(11, 145, 179);" *ngIf="enseignantForm.controls['pwd'].invalid && (enseignantForm.controls['pwd'].dirty || enseignantForm.controls['pwd'].touched)">
+
+   Vérifier Le Mot De Passe  
+      </div>
+</div>
+
+            <input type="text" class="counter_input" id="linkedin" placeholder=" LinkedIn:" [(ngModel)]="user.linkedin"
+               [ngModelOptions]="{standalone: true}">
+            
+            <input type="number" class="counter_input" id="telephone" placeholder="Phone:"
+               [(ngModel)]="user.telephone"  formControlName="telephone" >
+               <div *ngIf="enseignantForm.controls['telephone'].invalid && (enseignantForm.controls['telephone'].dirty || enseignantForm.controls['telephone'].touched)">
+                  <div  style="color: rgb(11, 145, 179);" *ngIf="enseignantForm.controls['telephone'].invalid && (enseignantForm.controls['telephone'].dirty || enseignantForm.controls['telephone'].touched)">
+               
+                  Vérifier le numéro de telephone
+                     </div>
+               </div>
+            <button class="counter_form_button col-sm-8,5"  (click)="addEnseigant(enseignantForm.value)"   [disabled]="enseignantForm.invalid">{{title}} enseignant </button>
+         </form>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,21 @@
+<!-- Events -->
+
+<div class="events" style="margin-top: 70px;" >
+    <div class="container">
+        <div class="row">
+            <div class="col " >
+                <div class="section_title_container text-center">
+                    <h1 class="section_title">Nos prochains évènements</h1>
+                    <div class="section_subtitle"><p></p></div>
+                </div>
+            </div>
+        </div>
+  <div class="row events_row" style="margin-top: 50px;">
+
+            <div *ngFor='let e of events 'class="col-lg-3   "style="margin: px;">
+                <app-event [event]='e'></app-event>
+            </div> 
+
+
+        </div>
+        

@@ -1,0 +1,32 @@
+.team_col .team_item
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.team_col:first-child .team_item
+{
+    padding-left: 0;
+    padding-right: 0px;
+}
+.team_col:nth-child(4n) .team_item
+{
+    padding-left: 0px;
+    padding-right: 0;
+}
+.team_col:nth-child(odd) .team_item
+{
+    padding-right: 0px;
+}
+.team_col:nth-child(even) .team_item
+{
+    padding-left: 0px;
+}
+.milestone:not(:last-child)
+{
+    margin-bottom: 50px;
+}
+.partners_slider_container
+{
+    width: calc(100% + 80px);
+    left: -40px;
+}

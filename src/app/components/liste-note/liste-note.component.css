@@ -1,0 +1,152 @@
+/* body
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	background: #FFFFFF;
+	color: #a5a5a5;
+}
+div
+{
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+th
+{
+	background-color: rgba(219, 217, 213, 0.856);
+	list-style: none;
+    font-family: serif;
+	width: auto; 
+	border: 1px solid rgb(197, 195, 192);
+
+    }
+p
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 1.85;
+	font-weight: 400;
+	color: #76777a;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+};
+	
+h1{font-size: 48px;}
+h2{font-size: 36px;}
+h3{font-size: 24px;}
+h{
+    size: 70px;
+    margin-top: 150px;
+    font-size: 35px;
+    margin-left: 200px;
+border-bottom: forestgreen;
+
+}
+/* rgb hsl(193, 87%, 51%); */
+/* h5{font-size: 14px;}
+h1, h2, h3, h5, h6
+{
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	color: #384158;
+	margin-bottom: 0;
+}
+.tableau{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 200px ;
+    margin-right: 50px;
+    margin-bottom: 80px;
+		
+
+	
+
+}
+
+
+ h4{
+     display: block;
+     transform: translate(10%,50%);
+     position: relative;
+	font-family: 'Roboto Slab', serif;
+	color: #384158;
+	margin-bottom: 20px;
+    margin-top: 150px;
+	left: 10px;
+    font-size:25px ;
+    font-weight: 600;
+    text-decoration: underline 5px hsl(193, 87%, 51%)
+
+    /* border-bottom:10px solid hsl(193, 87%, 51%) */
+/*     
+}
+h4::after{
+    position: absolute;
+    content: "";
+    width: 100;
+    height: 10PX    ;
+    background-color: black;
+    font-style: italic;
+
+}
+.t1 ,tr,td{
+	border: 1px solid rgb(197, 195, 192);
+     font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+*/ 
+
+
+table {
+	
+	border-collapse: separate;
+	border:solid 2px rgba(192, 192, 192, 0.849);
+	  width:80%;
+	  
+	  tab-size: 30cm;
+	  
+	}
+	th {
+
+		font-size: small;
+		font-family: Arial, Helvetica, sans-serif;
+		background-color:   hsl(180, 55%, 88%);
+		 color:black;
+	
+	  }
+	td{
+
+			font-family:cursive;
+			   font-size:18px;
+			   color: rgb(0, 0, 0);
+			   
+			   background-color:hsla(0, 10%, 96%, 0.829);
+			  border: solid 1px rgb(192, 192, 192);
+
+	  border: solid 1px silver;
+	  width:10px;
+	 
+	}
+
+	.main_nav li.active::after
+  {
+	  display: block;
+	  position: absolute;
+	  bottom: -2px;
+	  left: 0;
+	  width: 100%;
+	  height: 2px;
+	  background: #14bdee;
+	  content: '';
+  }
+  .div1{
+font-family: Georgia, 'Times New Roman', Times, serif;
+width: 350px;
+  }
+	

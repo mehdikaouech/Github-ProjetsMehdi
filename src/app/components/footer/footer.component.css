@@ -1,0 +1,32 @@
+/* 
+.dropdown-toggle{
+    text-align: left;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: solid 1px silver;
+	background:#384158;
+     width: 10px;
+     font-size: 14px;
+    font-display: inline;
+} */
+
+.dropdown{
+    
+    color: #f8f7f7;
+    font-size: 16px;
+    cursor: pointer;
+
+    
+}
+.footer_logo_text span
+{
+	color: #14bdee;
+}
+.footer_title
+{
+	font-family: 'Roboto Slab', serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: #ffffff;
+	line-height: 0.75;
+}

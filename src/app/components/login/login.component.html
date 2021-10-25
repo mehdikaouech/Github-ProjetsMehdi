@@ -1,0 +1,141 @@
+<!-- 
+
+<div class="row">
+    
+    <div class="col-md-6 mx-auto p-0">
+        <div class="card">
+            <div class="login-box">
+                <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login </label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+                    <div class="login-space">
+                        <form #loginForm="ngForm" (ngSubmit)="Login()">
+                        <div class="login">
+                            <div class="group"> <label for="user" class="label">votre Email</label> <input id="user" type="text" class="input" placeholder="Entrer votre Email" [(ngModel)]="login.email"
+                                [ngModelOptions]="{standalone: true}"> </div>
+                                <div class="group"> <label for="user" class="label">votre mot de passe</label> <input id="user" type="password" class="input" placeholder="Entrer votre mot de passe"[(ngModel)]="login.pwd"
+                                    [ngModelOptions]="{standalone: true}"> </div>
+                                <div class="group">
+                                <button class="button" value=" Envoyer">ajouter</button>
+                           
+                       
+                            <div class="hr"></div>
+                        </div>
+                    
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- 
+////login final//// -->
+<!-- <div class="section_background parallax-window" data-parallax="scroll"
+data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+<div class="container" >
+	<div class="form-group">
+	  
+		   <p> 
+		   <img    class="imgmale" src="assets/images/loginn.jpg"  alt="" >
+			</p>
+			
+   </div>
+<div style="margin-top: 100px;"> 
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6 text-center mb-5">
+				<h2 class="heading-section"></h2>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-lg-12">
+				<div class="login-wrap p-4 p-md-5">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="fa fa-user-o"></span>
+					</div>
+					<h3 class="text-center mb-6">Sign In</h3>
+					<form #loginForm='ngForm' (ngSubmit)='Login()' class="login-form">
+						<div class="form-group">
+							<input type="email" class="form-control rounded-left"[(ngModel)]="login.email"
+								[ngModelOptions]="{standalone:true}" placeholder="email" required>
+						</div>
+						<div class="form-group d-flex">
+							<input type="password" class="form-control rounded-left" [(ngModel)]="login.pwd"
+								[ngModelOptions]="{standalone:true}" placeholder="Password" required>
+						</div>
+						<div class="form-group">
+							<button type="submit"
+								class="form-control btn btn-primary rounded submit px-3">Login</button>
+						</div>
+						<div class="form-group d-md-flex">
+							<div class="w-50">
+								<label class="checkbox-wrap checkbox-primary">Remember Me
+									<input type="checkbox" checked>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="w-50 text-md-right">
+								<button routerLink="/signup" class="btn btn-default">S'inscrire</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>  -->
+
+<!-- Sign in Start -->
+
+<section 
+ 
+ class="login-box">
+    <div class="container sign-in-page-bg mt-5 p-0" style="margin-left: -155px;">
+        <div class="row no-gutters">
+            <div class="col-md-6 text-center">
+                <div class="sign-in-detail text-white">
+					<div class="form-group" style="padding-top: 220px;" >
+	  
+						
+						<!-- <p> 
+                            <img    class="imgmale" src="assets/images/loginn.jpg"  alt="" >
+                             </p> -->
+						 
+				</div>
+                </div>
+            </div>
+            <div class="col-md-6 position-relative" >
+                <div class="sign-in-from" style="padding-top: 250px;padding-right: 90px;">
+                    
+                    <div class="message">{{message}} </div>
+                    <h1 class="mb-0">Connexion</h1> 
+                    <form class="mt-4" [formGroup]="loginForm" >
+                        <div class="form-group">
+                            <label>E-mail :</label>
+                            <input type="text" class="form-control mb-0" id="email" name="email" formControlName="email"   placeholder="email" value={{email}}>
+                            <div >
+                                <small  class="text1"  *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)"> Entrer  votre E-mail <br></small>
+                            </div>
+                    
+                        </div>
+                        <div class="form-group">
+                            <label>Mot de passe</label> 
+                            <input type="password" class="form-control mb-0"  name="pwd" formControlName="pwd" placeholder="mot de passe">
+                            <div >
+                                <small class="text1"   *ngIf="loginForm.controls['pwd'].invalid && (loginForm.controls['pwd'].dirty || loginForm.controls['pwd'].touched)">Entrer votre Mot de passe <br></small>
+                            </div>
+                        </div>
+                        <div class="d-inline-block w-100"> 
+                            <!-- <button type="submit" class="btn btn-primary float-right" (click)="Login()" >Se Connecter</button> -->
+                            <button type="submit" class="btn btn-primary float-right" [disabled]="loginForm.invalid" (click)="Login()" >Se Connecter</button>
+                        </div>
+                        <div class="sign-info">
+                           
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

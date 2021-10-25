@@ -1,0 +1,54 @@
+
+  <div class="section_background parallax-window" data-parallax="scroll"
+  data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+ 
+
+
+<div class="container" style="margin-top: 250px; margin-bottom: 250px;" >
+   
+<p> 
+   <img    class="imgmale" src="assets/images/emplois.jpg"  type= "button" alt="">
+    </p>
+
+    <div class="row">
+       <div class="col ">
+        <form  [formGroup]="sessionForm"  >
+           
+             <div class="counter_form_title">{{title}}-Session </div>
+             <div class="message">{{message}} </div>
+             <input type="text" class="counter_input"  required placeholder=" Session" id="nom" [(ngModel)]="session.nom"  formControlName="nom">
+             <label for="date" class="counter_label col-2">Date de Démarrage</label>
+             <input type="date" class="counter_input col-10" required placeholder="date de cloture:" id="d2d" [(ngModel)]="session.d2d" formControlName="d2d"
+            >
+             <label for="date" class="counter_label col-2">Date de Cloture</label>
+             <input type="date" class="counter_input col-10" required placeholder="date de cloture:" id="d2c" [(ngModel)]="session.d2c" formControlName="d2c"
+             >
+             <input type="text" class="counter_input" placeholder="nombre d'heure:" required id="nbheures" [(ngModel)]="session.nbheures" formControlName="nbheures"
+             >
+             <input type="text" class="counter_input" placeholder="prix:" [(ngModel)]="session.prix"  required formControlName="prix"  id="prix"
+ >
+             <select name="counter_select" id="formation" class="counter_input counter_options" [(ngModel)]="session.formation" required  formControlName="formation"
+            >
+             <option selected="selected">--Choisir formation--</option>
+               <option *ngFor="let c of childFromation">{{c.nom}}</option>
+            
+              
+              
+             </select>
+             <select name="counter_select"  id="counter_select" class="counter_input counter_options" required [(ngModel)]="session.formateur"
+             [ngModelOptions]="{standalone: true}">
+             <option selected="selected" >--Choisir enseignants--</option>
+               <option *ngFor="let c of childUser" >{{c.nom}}.{{c.prenom}} </option>
+                       
+              
+              
+            </select>
+            
+             
+             <button type="submit" class="counter_form_button"  (click)="addSession()"   [disabled]="sessionForm.invalid">ajouter </button>
+           
+          </form>
+       </div>
+    </div>
+ </div>
+ 

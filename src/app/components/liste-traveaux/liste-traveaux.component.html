@@ -1,0 +1,45 @@
+
+     <div class=col-sm-10 style="margin-top: 200px; margin-bottom: 300px;margin-left: 300px ;margin-right:500px;" >
+      <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+          <div class="iq-card-header d-flex justify-content-between">
+             
+             <div class="iq-header-title">
+               <h4 class="card-title">{{title}}</h4>
+             </div> 
+             <div class="chercher" >
+               <div class="form-outline">
+               
+                </div>
+           </div> 
+          </div>
+          <div class="iq-card-body">
+            <div class="table">
+               <table class="table mb-0 table-borderless">
+                  
+      <tr>
+        
+          <th class="table-info">Etudiant</th>
+          <th class="table-info">Discription</th>
+          <th class="table-info">Actions</th>
+      </tr>
+      <tr *ngFor="let c of listetraveaux">
+         
+         
+          <td>{{c.nomEtudiant}}.{{c.prenomEtudiant}}</td>
+          <td>{{c.description}}</td>
+   
+ 
+
+          <td>
+            <a style="margin-left: 10px;" [href]="c.img"   class="btn btn-primary btn-sm mr-2 fa fa-eye" ></a> 
+           
+               <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)="delete(c._id)"  ><i class="fa fa-trash"></i></button>
+  
+          </td>
+          
+      </tr>
+  </table>
+  
+        </div>
+      </div>
+   </div>

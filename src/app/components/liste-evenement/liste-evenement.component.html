@@ -1,0 +1,50 @@
+
+<div class="section_background parallax-window" data-parallax="scroll"
+data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+<div class=col-sm-11 style="margin-top: 200px; margin-bottom: 250px;margin-left: 100px ;margin-right:500px;">
+    <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+        <div class="iq-card-header d-flex justify-content-between">
+    
+           <div class="iq-header-title">
+              <h4 class="card-title">Liste des Evénements</h4>
+           </div> 
+           <!-- <div class="chercher" >
+             <div class="form-outline">
+                <input type="search" id="form1" class="form-control " />
+             
+              </div>
+         </div>  -->
+        </div>
+        <div class="iq-card-body">
+          <div class="table">
+             <table class="table mb-0 table-borderless" class="table table-striped" >
+                
+    <tr>
+        <th class="table-info">Image</th>
+        <th class="table-info">Titre</th>
+        <th class="table-info">Description</th>
+        <th class="table-info">Adresse</th>
+        <th class="table-info">Date</th>
+        <th class="table-info">Heure</th>
+        <th class="table-info" *ngIf="isAdmin()">Actions</th>
+    </tr>
+    <tr *ngFor="let e of events">
+        <td><a [href]="e.image" class="btn btn-primary">Image </a></td>
+        <td>{{e.title}}</td>
+        <td>{{e.description}}</td>
+        <td>{{e.address}}</td>
+        <td>{{e.eventDate}}</td>
+        <td>{{e.eventTime}}</td>
+        <td *ngIf="isAdmin()">
+
+            <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)='editEvent(e._id)'><i class="fa fa-eye"></i></button>
+             <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)='deleteEvent(e._id)'><i class="fa fa-trash"></i></button>
+
+        </td>
+        
+    </tr>
+</table>
+
+      </div>
+    </div>
+ </div>

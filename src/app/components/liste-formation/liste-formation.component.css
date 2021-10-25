@@ -1,0 +1,30 @@
+
+table {
+    
+    border-collapse: separate;
+    border:solid 2px rgba(192, 192, 192, 0.849);
+      width: 90%;
+      font-family:cursive;
+     font-size:18px;
+     color: rgb(0, 0, 0);
+     border: solid 1px rgb(192, 192, 192);
+    border: solid 1px rgb(192, 192, 192);
+    }
+    td{
+      border: solid 1px silver;
+      
+    }
+    th {
+      height: 50px;
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:hsl(0, 9%, 96%);
+       color:black;
+  
+    }
+    .table tr:nth-child(even) {background-color: #d6ecf1}
+    .table tr:nth-child(odd)  {background-color: #FFFFFF;}
+    button{
+    float: inline-end;
+      
+    }

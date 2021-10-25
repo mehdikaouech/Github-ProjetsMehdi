@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="courses" style="margin-top: 100px;">
+    <div class="section_background parallax-window" data-parallax="scroll" data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <h2 class="section_title">Bienvennue {{user.nom}} {{user.prenom}}{{user.role}}
+                    </h2>
+                    <div class="section_subtitle">
+                        <!-- <button class="btn btn-primary" class="monBoutton" (click)="emplois(session)" >emplois</button> -->
+              
+                        <button class="btn btn-primary" class="monBoutton" (click)="mesNote(id)" >Mes note</button>
+                        <h3 >Inscrit :</h3>    <span>
+                          Session  {{user.session}} <br>
+                         Formation : {{user.formation}}
+                        
+                     </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <app-evenement></app-evenement> -->

@@ -1,0 +1,88 @@
+<div class="section_background parallax-window" data-parallax="scroll"
+data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+<div class="container" >
+   <div class="form-group">
+          <p> 
+          <img    class="imgmale" src="assets/images/male.jpg"  alt="" >
+           </p>
+  </div>
+   <div class="row">
+      <div class="col ">
+          <form [formGroup]="etudiantForm"  >
+               <div class="counter_form_title">{{title}}-Etudiant 
+               </div>
+               <div class="form-group">
+                  <div class="message">{{message}} </div>
+                  <!-- <select [(ngModel)]="user.role"
+                  [ngModelOptions]="{standalone: true}" class="form-control" id="role"  required>
+                    <option  [value]="Role" >{{Role}}</option>
+                  </select> -->
+                </div>
+                <input type="text" class="counter_input" id="nom" placeholder="Nom:" [(ngModel)]="user.nom" formControlName="nom"
+                >
+                  <div *ngIf="etudiantForm.controls['nom'].invalid && (etudiantForm.controls['nom'].dirty || etudiantForm.controls['nom'].touched)">
+                     <div  style="color: rgb(11, 145, 179);" *ngIf="etudiantForm.controls['nom'].invalid && (etudiantForm.controls['nom'].dirty || etudiantForm.controls['nom'].touched)">
+               
+                    Saisir le nom de l'Etudiant
+                        </div>
+               </div>
+               <input type="text" class="counter_input" id="prenom" placeholder="Prénom:" [(ngModel)]="user.prenom" formControlName="prenom"
+               >
+                 <div *ngIf="etudiantForm.controls['prenom'].invalid && (etudiantForm.controls['prenom'].dirty || etudiantForm.controls['prenom'].touched)">
+                    <div  style="color: rgb(11, 145, 179);" *ngIf="etudiantForm.controls['prenom'].invalid && (etudiantForm.controls['prenom'].dirty || etudiantForm.controls['prenom'].touched)">
+              
+                   Saisir le prenom de l'Etudiant
+                       </div>
+                    </div>
+                    <input type="number"  class="counter_input"  id="cin"  placeholder="Cin" required  formControlName="cin" [(ngModel)]="user.cin" 
+                    >   <div *ngIf="etudiantForm.controls['cin'].invalid && (etudiantForm.controls['cin'].dirty || etudiantForm.controls['cin'].touched)">
+                       <div  style="color: rgb(11, 145, 179);" *ngIf="etudiantForm.controls['cin'].invalid && (etudiantForm.controls['cin'].dirty || etudiantForm.controls['cin'].touched)">
+                 
+                      Vérifier le  Numéro du carte d'identité  
+                          </div>
+                 </div>
+             <input type="email" class="counter_input" name="email" id="email" required placeholder="mail@serveur.com"  formControlName="email" [(ngModel)]="user.email" 
+   >   <div *ngIf="etudiantForm.controls['email'].invalid && (etudiantForm.controls['email'].dirty || etudiantForm.controls['email'].touched)">
+      <div  style="color: rgb(11, 145, 179);" *ngIf="etudiantForm.controls['email'].invalid && (etudiantForm.controls['email'].dirty || etudiantForm.controls['email'].touched)">
+
+        L'Email est Obligatoire
+         </div>
+</div>
+<input type="password" class="counter_input"  id="pwd" placeholder="Mot De Passe:" name="pwd"  required formControlName="pwd" [(ngModel)]="user.pwd" >
+<div *ngIf="etudiantForm.controls['pwd'].invalid && (etudiantForm.controls['pwd'].dirty || etudiantForm.controls['pwd'].touched)">
+   <div  style="color: rgb(11, 145, 179);" *ngIf="etudiantForm.controls['pwd'].invalid && (etudiantForm.controls['pwd'].dirty || etudiantForm.controls['pwd'].touched)">
+
+   Vérifier Le Mot De Passe  
+      </div>
+</div>
+           
+<input type="number" class="counter_input" id="telephone" placeholder="telephone:"
+[(ngModel)]="user.telephone"  formControlName="telephone" >
+<div *ngIf="etudiantForm.controls['telephone'].invalid && (etudiantForm.controls['telephone'].dirty || etudiantForm.controls['telephone'].touched)">
+   <div  style="color: rgb(11, 145, 179);" *ngIf="etudiantForm.controls['telephone'].invalid && (etudiantForm.controls['telephone'].dirty || etudiantForm.controls['telephone'].touched)">
+
+   Vérifier le numéro de téléphone
+      </div>
+</div>
+
+                <select name="counter_select" id="counter_select" class="counter_input counter_options"   [(ngModel)]="user.session" formControlName="session">
+                  <div *ngIf="etudiantForm.controls['session'].invalid && (etudiantForm.controls['session'].dirty || etudiantForm.controls['session'].touched)">
+                     <div  style="color: rgb(11, 145, 179);" *ngIf="etudiantForm.controls['session'].invalid && (etudiantForm.controls['telephone'].dirty || etudiantForm.controls['session'].touched)">
+                  
+                    choisir une session
+                        </div>
+                  </div>
+                <option selected="selected">--Choisir session--</option>
+                <option *ngFor="let c of session">{{c.nom}}</option>
+           
+                </select>
+                <select name="counter_select" id="counter_select" class="counter_input counter_options"  [(ngModel)]="user.formation"
+                [ngModelOptions]="{standalone: true}"  >
+                   <option selected="selected" >--Choisir formation--</option>
+                   <option *ngFor="let c of formations">{{c.nom}}</option>
+                </select>
+      <button   class="counter_form_button col-sm-8,5"  (click)="addEtudiant()"   [disabled]="etudiantForm.invalid">{{title}} Etudiant </button>
+           </form>
+   </div>
+   </div>
+

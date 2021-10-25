@@ -1,0 +1,122 @@
+.event_image:hover
+.event_image.active a
+{
+color: darkgray;
+}
+
+.event{
+    border: none;
+    border-radius: 20px;
+    transition: all 0.5s;
+    cursor: pointer
+
+}
+.events
+{
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 28px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: #FFFFFF;
+}
+
+.events
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 93px;
+	padding-bottom: 103px;
+}
+.features_row
+{
+	margin-top: 55px;
+}
+.events
+{
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 28px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: #FFFFFF;
+}
+.events:hover
+{
+    
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+	box-shadow: 0px 5px 40px rgba(29,34,47,0.15);
+}
+.events_icon
+{
+	height: 55px;
+}
+.events_icon img
+{
+	max-width: 100%;
+}
+.events_title
+{
+	position: relative;
+	font-size: 20px;
+	margin-top: 23px;}
+    .event:hover
+{
+  
+    z-index: 1.2;
+    -webkit-transition: all 50ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 50ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 50ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 50ms ease-in;
+    transform: scale(1.01);
+	box-shadow: 0px 5px 40px rgb(162, 227, 247);
+}
+.event_text{
+	padding-left: -50px;
+}
+.event
+{
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 28px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: #FFFFFF;
+}
+.events_col .team_item
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.events_col:first-child .team_item
+{
+    padding-left: 50px;
+    padding-right: 0px;
+}
+.events_col:nth-child(4n) .team_item
+{
+    padding-left: 0px;
+    padding-right: 0;
+}
+.events_col:nth-child(odd) .team_item
+{
+    padding-right: 0px;
+}
+.events_col:nth-child(even) .team_item
+{
+    padding-left: 0px;
+}
+.milestone:not(:last-child)
+{
+    margin-bottom: 50px;
+}
+.partners_slider_container
+{
+    width: calc(100% + 80px);
+    left: -40px;
+}
+

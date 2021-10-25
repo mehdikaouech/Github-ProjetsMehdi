@@ -1,0 +1,39 @@
+<div class="section_background parallax-window" data-parallax="scroll"
+data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+<p> 
+    <img    class="imgmale" src="assets/images/emplois.jpg"  type= "button" alt="">
+     </p>
+
+
+    
+<div class="container" style="margin-top: 250px; margin-bottom: 250px;">
+    
+ 
+
+    <div class="row">
+   
+        <div class="col ">
+            <form #emploisDuTempsForm="ngForm" (ngSubmit)="addEmplois()" >
+                <div class="counter_form_title">ajouter-Emplois-Du-Temps </div>
+            
+                <select name="counter_select"  id="counter_select" class="counter_input counter_options col-sm-9" [(ngModel)]="emplois.idSession"
+                [ngModelOptions]="{standalone: true}">
+                <option selected="selected">--Choisir session--</option>
+                <option *ngFor="let c of childsessions " > {{c.nom}}</option>
+                </select>
+            
+                <button  type="button" (click)='filePicker.click()' class="btn btncd success col-sm-2 "
+                    style="color: rgb(67, 168, 226);"> Sélectionner fichier
+                    </button>
+                <div class="form-group">
+                    <input style="visibility: hidden;" type="file" class="form-control" #filePicker
+                        (change)='onImageSelected($event)' />
+                </div>
+           
+                <img [src]="imagePreview" *ngIf="imagePreview">
+           
+                <button  class="counter_form_button col-sm-11" type="submit">envouyer </button>
+            </form>
+        </div>
+    </div>
+</div>

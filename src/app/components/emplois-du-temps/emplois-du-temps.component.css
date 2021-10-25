@@ -1,0 +1,50 @@
+
+table {
+    border-collapse: separate;
+    border:solid 2px rgba(192, 192, 192, 0.849);
+      width: 90%;
+      tab-size: 30cm;
+      
+    }
+    td{
+      border: solid 1px silver;
+    }
+    th {
+      height: 50px;
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:hsl(0, 9%, 96%);
+       color:black;
+  
+    }
+    select{
+        border:solid 2px rgba(192, 192, 192, 0.849);
+        font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      color:black;
+
+    }
+
+    p{
+      display: block;
+      float: left;
+      margin-left: 0px;
+      padding-right: 20px;
+    } 
+      .btn {
+        border: solid 2px silver;
+        margin-bottom: 1px;
+        align-content: center;
+        margin-left: 35%;
+      }
+      .imgmale{
+
+        display: inline-flex;
+          border-radius:50px;
+          width: 200px;
+          height: 200px;
+        
+        }
+        .table tr:nth-child(even) {background-color: #cfebf1}
+        .table tr:nth-child(odd)  {background-color: #FFFFFF;}
+        

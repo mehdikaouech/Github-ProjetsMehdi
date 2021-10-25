@@ -1,0 +1,65 @@
+
+
+<!-- 
+crer profil 
+delete display  -->
+
+<div class=col-sm-10 style="margin-top: 200px; margin-bottom: 200px;margin-left: 150px ;margin-right: 50px;" >
+    <div class="counter_form_title">PROFIL</div>
+
+    
+
+    <div class="row">
+        <div class=" col-lg-3 col-md-12 text-center">
+          
+                <img    class="imgmale" src="assets/images/male.jpg"  >
+                 
+        </div>
+     
+        <div class="col-lg-9 col-md-12" >
+      
+            <h3>Information</h3>
+            <dl class="row">
+
+                <dt class="col-sm-3">Role:</dt>
+                <dd class="col-sm-7">{{user.role }}</dd>
+                <dt class="col-sm-3">Nom:</dt>
+                <dd class="col-sm-7">{{user.nom }}</dd>
+                
+                <dt class="col-sm-3">Prenom:</dt>
+                <dd class="col-sm-7">{{user.prenom }}</dd>
+                
+                <dt class="col-sm-3">Cin:</dt>
+                <dd class="col-sm-7">{{user.cin }}</dd>
+                <dt class="col-sm-3">E-mail :</dt>
+                <dd class="col-sm-7">{{user.email }}</dd>
+                <dt class="col-sm-3">Téléphones :</dt>
+                <dd class="col-sm-7">{{user.telephone }}</dd>
+                <dt class="col-sm-3"  *ngIf="isEnseignant()">linkedin :</dt>
+                <dd class="col-sm-7"  *ngIf="isEnseignant()">{{user.linkedin}}</dd>  
+         
+                <!-- <dt class="col-sm-3"  >linkedin :</dt>
+                <dd class="col-sm-7">{{user.linkedin }}</dd>  --> 
+                <!-- <dt class="col-sm-3">Absence :</dt>
+                <dd class="col-sm-7" >0 Absence</dd> 
+         -->
+            </dl>
+            <div  *ngIf="isEtudiant()">
+            <h3 >Inscription</h3>
+            <dl class="row"> 
+                <dt class="col-sm-3">Session:</dt>
+                <dd class="col-sm-7">{{user.session }}</dd>
+                
+            <dt class="col-sm-3">Formation:</dt>
+            <dd class="col-sm-7">{{user.formation }}</dd>
+     
+            
+    
+    
+        </dl>
+    </div>
+    </div>
+
+
+        <div class="w-100"></div>
+     </div></div>

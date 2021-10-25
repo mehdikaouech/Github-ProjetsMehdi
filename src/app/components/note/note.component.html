@@ -1,0 +1,51 @@
+<div class="section_background parallax-window" data-parallax="scroll"
+data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+<div class="container" style="margin-left: 650px;" >
+   <div class="form-group">
+      <p> 
+         <img    class="imgmale" src="assets/images/note.jpg"  type= "button" alt="">
+          </p>
+ 
+       <div class="row ">
+        <form #noteForm="ngForm" (ngSubmit)="addNote()">
+             <div class="counter_form_title">ajouter  note </div>
+             <label for="select">Etudiant</label>
+             <select  class="form-control" [(ngModel)]="note.Etudiant"
+               [ngModelOptions]="{standalone: true}">
+               <option selected="selected" >--Choisir Etudiant--</option>
+                 <option  [value]="opt._id"   *ngFor="let opt of childEtudiants">
+                {{opt.nom}} - {{opt.prenom}} </option>
+           
+              </select>
+             <!-- <label for="select">Session</label>
+             <select  class="form-control" [(ngModel)]="note.idEtudiant"
+             [ngModelOptions]="{standalone: true}" required>
+               <option  [value]="opt._id"  *ngFor="let opt of childEtudiants">
+              {{opt.nom}} </option>
+            </select> -->
+       
+       
+            <label for="select"> formation</label>
+            <select  class="form-control"  [(ngModel)]="note.formation"
+            [ngModelOptions]="{standalone: true}">
+              <option *ngFor="let c of childFromations"  >{{c.nom}}</option>
+           </select>
+          
+              
+            
+
+
+            <input class="input_note" type="number" placeholder="Note" [(ngModel)]="note.resultat" [ngModelOptions]="{standalone: true}">
+          
+       
+            
+            <input type="text" [(ngModel)]="note.mention" placeholder="mention" class="input_" [ngModelOptions]="{standalone: true}">
+             
+             <button type="submit" class="counter_form_button">ajouter </button>
+          </form>
+       </div>
+      </div>
+   </div>
+ 
+
+ 

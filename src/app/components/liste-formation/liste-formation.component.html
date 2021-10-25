@@ -1,0 +1,35 @@
+<div class=col-sm-8 style="margin-top: 200px; margin-bottom: 250px;margin-left: 400px ;" >
+   
+    <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+        <div class="iq-card-header d-flex justify-content-between">
+           <div class="iq-header-title">
+              <h4 class="card-title">Liste  des formations  </h4>
+           </div> 
+        </div>
+        <div class="iq-card-body">
+          <div class="table-responsive">
+             <table class="table mb-0 table-borderless">
+     
+                   <tr>
+                      <th scope="col">Matière</th> 
+                      <th scope="col">Description</th> 
+            
+                      <th style="width:130px;" scope="col">Action</th>
+
+                   </tr>
+                      <tr *ngFor ="let c of formations">
+                        <td>{{c.nom}}</td>
+                        <td>{{c.description}}</td>
+                        
+                       <td>
+                         <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal"(click)=" editFormation(c._id)"><i class="fa fa-eye"></i></button>
+                         <button type="button" class="btn btn-primary btn-sm mr-2" (click)="deleteFormation(c._id)" > <i class="fa fa-trash"></i></button>
+                      </td>
+                   </tr> 
+               
+             </table>
+          </div>
+        </div>
+     </div>
+    </div>
+    

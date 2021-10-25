@@ -1,0 +1,40 @@
+<div class="section_background parallax-window" data-parallax="scroll"
+data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+<div class=col-sm-10 style="margin-top: 200px; margin-bottom: 250px;margin-left: 350px ;margin-right: 50px;" >
+   
+
+    <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+        <div class="iq-card-header d-flex justify-content-between">
+           <div class="iq-header-title">
+              <div class="counter_form_title">Mes services</div>
+           </div> 
+        </div>
+        <div class="iq-card-body">
+          <div class="table-responsive">
+             <table class="table mb-0 table-borderless">
+                <thead>
+                   <tr >
+                     <th scope="col">Categorie</th> 
+                      <th scope="col">Type</th> 
+                      <th scope="col" >Traitement</th> 
+                 
+
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr >
+                          
+                  <tr *ngFor="let c of messervice">
+                     <td class="td1" style="  text-transform: uppercase">{{c.categorie}}</td>
+                    <td class="td1">{{c.type}}</td>
+                     <td class="td2">{{c.traitement||traitement}}</td>             
+                              
+                       
+                   </tr> 
+                </tbody>
+               
+             </table>
+          </div>
+        </div>
+     </div>
+    </div>

@@ -1,0 +1,47 @@
+<div class="page-content page-container  " id="page-content" style="margin-top: 90px; margin-left: 250px;margin-bottom: 165px" >
+  <div class="padding ">
+     
+      <div class="row container d-flex justify-content-center">
+          <div class="col-lg-12 ">
+           <h4 class="card-title">Mes Notes</h4>
+
+              <div class="card">
+    
+     
+                  <div class="card-body">
+                   
+                       <div class="table-responsive">
+                          <table class="table table-striped">
+                              <thead>
+                                  <tr>
+                     <th scope="col">Enseignant</th> 
+                     <th scope="col">Formation</th> 
+                     <th scope="col">note</th>
+                     <th scope="col">Mention</th>
+           
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let c of mesNote">
+                     <td>{{c.IDenseignant}}</td>
+                     <td>{{c.formation}}</td>
+                     <td [ngClass]="{
+                        'class2':c.resultat <15 ,
+                        'class3':c.resultat >15 }">{{c.resultat}}</td>
+                     <td [ngClass]="{
+                      'class2':c.resultat <15 ,
+                      'class3':c.resultat >15 }" >{{c.mention}}</td>
+            
+                    </tr>
+
+                  
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>

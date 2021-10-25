@@ -1,0 +1,117 @@
+<!-- <div class=col-sm-9 style="margin-top: 200px; margin-bottom: 300px;margin-left:350px ;margin-right:150px;" >
+<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+    <div class="iq-card-header d-flex justify-content-between">
+       
+       <div class="iq-header-title">
+          <h4 class="card-title">Liste des étudiants</h4>
+       </div>  -->
+       <!-- <form [FormGroup]="chercherForm"></form> -->
+       <!-- <div style="display:inline-block"> -->
+ <!-- <div class="chercher" >
+         <div class="form-outline">  -->
+  <!-- <input type="search" id="form1" class="form-control " formControlName="sessions" /><button (click)="chercherSessions(sessions)"> chercher</button> -->
+  <!-- <input type="search" id="form1" class="chercher" /><button style="display: inline;"> chercher</button></div>
+
+</div>
+     </div>  
+    </div>
+    <div class="iq-card-body">
+      <div class="table">
+         <table class="table mb-0 table-borderless">
+            
+               <tr>
+                  <th scope="col">Nom</th> 
+                  <th scope="col">Prenom</th> 
+                  <th scope="col">session</th>
+                 
+                  <th class="action">Action</th> 
+               </tr>
+               
+                  <tr *ngFor="let c of users">
+                     <td>{{c.nom}}</td>
+                     <td>{{c.prenom}}</td>
+                     <td>{{c.session}}</td>
+            
+               
+                    <td>
+                     <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)="displayUser(c._id)"><i class="fa fa-eye"></i></button>
+                     <button type="button" class="btn btn-primary btn-sm mr-2"  (click)="deleteUser(c._id)"  > <i class="fa fa-trash"></i></button>
+                     <button type="button" class="btn btn-primary btn-sm mr-2"  (click)="noteUser(c._id)"  >  <i class="fal fa-clipboard"></i></button>
+                    
+                  </td>
+               </tr> 
+         </table>
+      </div>
+    </div>
+ </div>
+
+
+    
+</div> -->
+<!-- <form [formGroup]="chercherForm">
+   <div style="display:inline-block"> 
+<div class="chercher" >
+      <div class="form-group">  
+<input type="search" id="form1" class="form-control " formControlName="session" /><button (click)="chercherSessions(sessions)"> chercher</button>
+<input type="search" id="form1" class="chercher" /><button style="display: inline;"> chercher</button></div>
+      
+</div>
+</div> -->
+
+<div class="page-content page-container  " id="page-content" style="margin-top: 90px; margin-left: 90px;" >
+   <div class="padding ">
+      
+       <div class="row container d-flex justify-content-center">
+           <div class="col-lg-12 ">
+            <h4 class="card-title">Liste des Etudiants</h4>
+
+               <div class="card">
+     
+      
+                   <div class="card-body">
+                    
+                        <div class="table-responsive">
+                           <table class="table table-striped">
+                               <thead>
+                                   <tr>
+                                       <th> Etudiant </th>
+                                       <th>  Nom </th>
+                                       <th> Prenom </th>
+                                       <th> cin </th>
+                                       <th> Téléphone </th>
+                                       <th> Email </th>
+                                       <th> sessions </th>
+                                       <th>  </th>
+                                       <th> Action </th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                       
+                  <tr *ngFor="let c of users">
+                                       <td class="py-1"><img src="assets/images/person-male.png" alt="image">
+                                       <td>{{c.nom}}</td>
+                            
+                                     <td>{{c.prenom}}</td>
+                                       
+                                     <td>{{c.cin}}</td>
+                                     <td>{{c.telephone}}</td>
+                                 
+                                     <td>{{c.email}}</td>
+                                     <td>{{c.session}}</td>
+                                     <td>{{c.linkedin}}</td>
+                                     <td>
+                                       <button type="button"  *ngIf="isAdmin()"  class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)="editEtudiant(c._id)"><i class="fa fa-eye"></i></button>
+                                       <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)="displayUser(c._id)"><i class="far fa-user"></i></button>
+                                       <!-- <button type="button"  class="btn btn-primary btn-sm mr-2"  (click)="noteUser(c._id)"  >  <i class="fal fa-clipboard"></i></button> -->
+                                       <button  type="button" *ngIf="isAdmin()" class="btn btn-primary btn-sm mr-2"  (click)="deleteUser(c._id)"> <i class="fa fa-trash"></i></button>
+                                    </td>
+                                 
+                               </tbody>
+                           </table>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>

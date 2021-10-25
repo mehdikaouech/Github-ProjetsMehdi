@@ -1,0 +1,103 @@
+<div class="container " style="margin-top: 200px; margin-bottom: 100px;" >
+    <div class="counter_form_title">Créer Service</div>
+    <form #serviceForm="ngForm" (ngSubmit)="addService()" >
+    <div class="row">
+        <div class="col-md-6">
+          
+            <div class="form-group"> <label>Catégorie *</label>
+                 <select
+                    class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1"
+                    aria-hidden="true"[(ngModel)]="service.categorie"
+                [ngModelOptions]="{standalone: true}" >
+                   
+                <option  selected="selected">Choisissez votre Catégorie</option>
+                <option value="demande">Demandee</option>
+                <option value="reclamation">Reclamation</option>
+            
+           
+     
+
+                </select>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group"> <label>Type</label> <select class="form-control "
+                    style="width: 100%;" tabindex="-1" aria-hidden="true" [(ngModel)]="service.type"
+                    [ngModelOptions]="{standalone: true}" >
+                    <option selected="selected">--Sélectionner type--</option>
+                    <option value="Attestation de présence">Attestation de présence</option>
+                    <option value="Attestation de stage">Attestation de stage</option>
+                    <option value="Attestation de paiement">Attestation de paiement</option>
+                    <option value="Attestation de paiement">Probleme Plateforme  </option>
+                    <option value="Attestation de paiement">Reclamation sur une Note  </option>
+
+
+
+
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <!-- <div class="col-md-12">
+            <div class="form-group"> <label>Session</label>    <select name="counter_select" id="counter_select" class="form-control "  [(ngModel)]="service.session"
+                [ngModelOptions]="{standalone: true}" >
+                <option selected="selected">--Sélectionner--</option>
+                <option *ngFor="let c of childSession">{{c.nom}}</option>
+           
+                </select>
+            </div>
+        </div> -->
+        <div class="col-md-6">
+        
+        </div>
+        <div class="row">
+            <div class="container">
+                <textarea name=""  id="" cols="500" rows="2" maxlength="50"
+                    placeholder=" Laisser un message..." [(ngModel)]="service.message"
+                    [ngModelOptions]="{standalone: true}" ></textarea>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="counter_form_button">ajouter</button>
+            </form>
+</div>
+
+<!-- <div class=col-sm-10 style="margin-top: 80px; margin-bottom: 300px;margin-left: 150px ;margin-right: 50px;" >
+    <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+        <div class="iq-card-header d-flex justify-content-between">
+           <div class="iq-header-title">
+              <div class="counter_form_title">Mes services</div>
+           </div> 
+        </div>
+        <div class="iq-card-body">
+          <div class="table-responsive">
+             <table class="table mb-0 table-borderless">
+                <thead>
+                   <tr >
+                      <th scope="col">type</th> 
+                      <th scope="col" >Traitement</th> 
+                      <th scope="col" >Action</th> 
+
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr >
+                          
+                  <tr *ngFor="let c of services">
+                    <td class="td1">{{c.type}}</td>
+                     <td class="td2">{{c.traitement||traitement}}</td>             
+                              <td class="td1">
+                         <button type="button"  href=" " class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i></button>
+                         <button type="button" class="btn btn-primary btn-sm mr-2" ><i class="fa fa-trash"></i></button>
+                      </td>
+                   </tr> 
+                </tbody>
+               
+             </table>
+          </div>
+        </div>
+     </div>
+    </div> -->

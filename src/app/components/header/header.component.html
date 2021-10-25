@@ -1,0 +1,298 @@
+<header class="header">
+	<!-- *ngIf="etudiantIsAuthenticated || etudiantIsAuthenticated || enseignantIsAuthenticated" -->
+<!-- Top Bar -->
+<div class="top_bar">
+	<div class="top_bar_container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+						<ul class="top_bar_contact_list">
+							<li>
+								<div class="question">Quelle que Question </div>
+							</li>
+							<li>
+								<i class="fa fa-phone" aria-hidden="true"></i>
+								<div>71252356</div>
+							</li>
+							<li routerLink="envoyerMessage">
+								<i class="fa fa-envelope-o" aria-hidden="true"></i>
+								<div type="button"> <a>contact@crococoder.tn</a></div>
+							</li>
+						</ul>
+						<div class="ml-auto">
+							<li class="dropdown">
+
+								<a style="text-align: left;" class="dropdown-toggle" data-toggle="dropdown">Bienvenue
+									<span class="caret">{{nom}} {{prenom}}
+									</span><img src="assets/images/administrator-male.png"
+										alt="image"> </a>
+								<ul class="dropdown-menu">
+									<li (click)="Profil(id)"><a> Mon Profil </a></li>
+
+									<span>
+										<li class="cc"> <a (click)="quitter()">déconnexion</a></li>
+									</span>
+								</ul>
+							</li>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Header Content -->
+<div class="header_container">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="header_content d-flex flex-row align-items-center justify-content-start">
+					<div class="logo_container">
+						<a href="/Home">
+							<div class="logo_text">Croco<span>Coder</span></div>
+						</a>
+					</div>
+					<nav class="main_nav_contaner ml-auto">
+						<ul class="main_nav">
+
+							<li class=""> <a routerLink="Home">Accueil</a> </li>
+
+							<li class="dropdown" *ngIf=" isEtudiant || isEnseignant " >
+
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Mon espace
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<span>
+										<li class=""> <a routerLink="Session" *ngIf="  isEnseignant "> Liste des sessions</a></li>
+									</span>
+									<span *ngIf=" isEtudiant">
+										<li class=""> <a routerLink="lesEnseignant"> Mes Enseignants</a></li>
+									</span>
+									<span *ngIf=" isEnseignant ">
+										<li class=""> <a routerLink="listeTraveau"> Liste  Documents</a></li>
+									</span>
+									<span *ngIf=" isEnseignant ">
+										<li class=""> <a routerLink="listeNote"> Liste  notes</a></li>
+									</span>
+									<span *ngIf=" isEtudiant ">
+										<li><a (click)="mesDocument(id)">Mes Documents</a></li>
+									</span>
+									<span *ngIf=" isEtudiant">
+										<li class=""> <a (click)="mesNote(id)"> Mes notes</a></li>
+									</span>
+									<span >
+										<li class=""> <a (click)="mesService(id)"> Mes service</a></li>
+									</span>
+									<span>
+										<li><a routerLink="emploisDuTemps">Emploit du temps</a></li>
+									</span>
+									<span>
+										<li class=""> <a routerLink="listeEmplois"> Liste Emploits</a></li>
+									</span>
+
+
+								</ul>
+							</li>
+							<li class="" *ngIf="etudiantIsAuthenticated"> <a routerLink="listeEvents">liste des Evénements</a>
+							</li>
+
+							<li class="dropdown" *ngIf="isAdmin">
+
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#"
+									>Utilisateurs
+									<span class="caret"></span></a>
+
+								<ul class="dropdown-menu">
+									<span>
+										<li class=""> <a routerLink="Admin"> Administrateur</a></li>
+									</span>
+									<span>
+										<li><a routerLink="listeEtudiants">Liste Etudiants</a></li>
+									</span>
+									<span>
+										<li><a routerLink="listeEnseignant">Liste Enseignants</a></li>
+									</span>
+									<span>
+										<li><a routerLink="addEtudiant">AjouterEtudiant </a></li>
+									</span>
+									<span>
+										<li><a routerLink="addEnseignant">AjouterEnseignant </a></li>
+									</span>
+
+								</ul>
+							</li>
+
+
+							<li class="dropdown" style="text-align: center;" *ngIf="isAdmin">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Session
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<span>
+										<li><a routerLink="Session"> Liste Sessions</a></li>
+									</span>
+									<span>
+										<li><a routerLink="addSession"> Ajouter Session</a></li>
+									</span>
+									<span>
+										<li><a routerLink="addEmplois"> Ajouter emplois</a></li>
+									</span>
+									<span>
+										<li><a routerLink="addFormation"> Ajouter Formation</a></li>
+									</span>
+									<span>
+										<li> <a routerLink="listeFormation">Liste Formations</a></li>
+									</span>
+									<span>
+										<li class=""> <a routerLink="listeEmplois"> Liste Emploits</a></li>
+									</span>
+								
+								</ul>
+							</li>
+
+							<li class="dropdown" *ngIf="isEnseignant">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Liste des Etudiants
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<span>
+										<li><a routerLink="listeEtudiants">Liste Etudiants</a></li>
+									</span>
+									<span>
+										<li><a routerLink="addNote"> Ajouter Note</a></li>
+									</span>
+									<li class="dropdown">
+
+								</ul>
+							</li>
+
+							<li *ngIf='isAdmin'>
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Evénement
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+
+									<span>
+										<li><a routerLink="addEvenement">Ajouter Evénement </a></li>
+									</span>
+									<span>
+										<li> <a routerLink="listeEvents">Liste Evénements</a> </li>
+									</span>
+
+
+
+
+								</ul>
+							</li>
+							<li >
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+
+									<span>
+										<li><a routerLink="créerService" *ngIf=" isEtudiant || isEnseignant ">Créer service</a></li>
+									</span>
+									<span>
+										<li> <a routerLink="listeService" *ngIf=" isAdmin ">Liste des services</a> </li>
+									</span>
+
+
+
+
+								</ul>
+							</li>
+							<li><a routerLink="contact" *ngIf=" isEtudiant || isEnseignant " >Contact</a></li>
+						</ul>
+
+
+
+
+
+						<!-- Hamburger -->
+
+
+						<div class="hamburger menu_mm">
+							<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Menu -->
+
+<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+	<div class="menu_close_container">
+		<div class="menu_close">
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<nav class="menu_nav">
+		<ul class="menu_mm">
+
+			<li class="active"> <a routerLink="">Accueil</a></li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Etudiant
+					<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<span>
+						<li><a routerLink="listeEtudiants">liste Etudiants</a></li>
+					</span>
+					<li><a routerLink="addEtudiant"> Ajouter Etudiant</a></li>
+					<li><a routerLink="addNote"> Ajouter Note</a></li>
+
+
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Enseignant
+					<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<span>
+						<li><a routerLink="listeEnseignant">liste enseignant</a></li>
+					</span>
+					<li><a routerLink="addEnseignant"> ajouter enseignant</a></li>
+
+				</ul>
+			</li>
+
+			<li class="dropdown" style="text-align: center;">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">session
+					<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<span>
+						<li><a routerLink="Session"> liste Session</a></li>
+					</span>
+					<li><a routerLink="addSession"> ajouter Session</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">services
+					<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<span>
+						<li> <a routerLink="listeService">liste des services</a> </li>
+					</span>
+					<li><a routerLink="emploisDuTemps">Emploit du temps</a></li>
+
+				</ul>
+			</li>
+			<li> <a routerLink="listeFormation">formation</a></li>
+			<li><a href="contact.html">Contact</a></li>
+
+
+		</ul>
+
+	</nav>
+
+</div>
+
+</header>

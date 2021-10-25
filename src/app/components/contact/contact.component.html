@@ -1,0 +1,121 @@
+<div class="section_background parallax-window" data-parallax="scroll"
+data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+
+
+<div class="courses" >
+
+ 
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <div class="contact">
+                
+               
+
+                    <div class="contact_info_container">
+                        <div class="container">
+                            <h2 class="section_title text-center" >Contacter nous</h2>
+                            <div class="row">
+
+                     
+               
+                                <div class="col-lg-12">
+                                    <div class="contact_form">
+                                        <form #contactForm='ngForm' (ngSubmit)='addContact()' class="comment_form">
+                                            <div class="form-group">
+                                                <div class="form_title">Pom</div>
+                                                <input type="text" [(ngModel)]='contact.firstName' [ngModelOptions]="{standalone:true}" class="form-control" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form_title">Prenom</div>
+                                                <input type="text" [(ngModel)]='contact.lastName' [ngModelOptions]="{standalone:true}" class="form-control" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form_title">Email</div>
+                                                <input type="email" [(ngModel)]='contact.email' [ngModelOptions]="{standalone:true}" class="form-control"  required="required">
+                                            </div>
+                                          
+                                            <div class="form-group">
+                                                <div class="form_title">objet</div>
+                                                <input type="text" [(ngModel)]='contact.objet' [ngModelOptions]="{standalone:true}" class="form-control" required="required">
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-info">Valider</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+		<!-- Contact Info -->
+
+		<div class="contact_info_container" style="margin-top: 100px;">
+			<div class="container">
+				<div class="row">
+
+					<!-- Contact Form -->
+					<div class="col-lg-6">
+						<div class="contact_form">
+							<div class="contact_info_title">Contact </div>
+							<form action="#" class="comment_form">
+								<div>
+									<div class="form_title">Nom</div>
+									<input type="text" class="comment_input" required="required"  [(ngModel)]='contact.firstName' [ngModelOptions]="{standalone:true}" class="form-control">
+								</div>
+                                <div>
+									<div class="form_title">Prenom</div>
+									<input type="text" class="comment_input" required="required"  [(ngModel)]='contact.lastName' [ngModelOptions]="{standalone:true}" class="form-control">
+								</div>
+								<div>
+									<div class="form_title">Email</div>
+									<input type="text" class="comment_input" required="required"[(ngModel)]='contact.email' [ngModelOptions]="{standalone:true}" class="form-control">
+								</div>
+								<div>
+									<div class="form_title">Message</div>
+									<textarea class="comment_input comment_textarea" required="required" [(ngModel)]='contact.objet' [ngModelOptions]="{standalone:true}" class="form-control" ></textarea>
+								</div>
+								<div>
+									<button type="submit" class="comment_button trans_200">submit now</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<!-- Contact Info -->
+					<div class="col-lg-6">
+						<div class="contact_info">
+							<div class="contact_info_title">Contact Info</div>
+							<div class="contact_info_text">
+								<p>Changez de vie, apprenez à coder. Notre objectif est de former des professionnels «prêt à l’emploi».N'hésitez pas de nous contacter .</p>
+							</div>
+							<div class="contact_info_location">
+								<div class="contact_info_location_title">Tunis</div>
+								<ul class="location_list">
+									<li>Centre Urbain Nord</li>
+									<li>24600900</li>
+									<li>contact@crococoder.tn
+                                    </li>
+								</ul>
+							</div>
+							<div class="contact_info_location">
+								<div class="contact_info_location_title">Sousse</div>
+								<ul class="location_list">
+									<li>Avenue H.Bourguiba, Immeuble Ghnima B45، Sousse‎ </li>
+									<li>24600900</li>
+									<li>contact@crococoder.tn
+                                    </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

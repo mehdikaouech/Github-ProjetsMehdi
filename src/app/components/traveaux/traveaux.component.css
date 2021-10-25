@@ -1,0 +1,39 @@
+/* img{width:300px;
+margin-left: 350px;    border: solid 1px silver;
+} */
+.btn{
+ margin-bottom:0;
+margin-left: 10px;
+  border: solid 1px silver; height: 45px;
+}
+select{
+    border: solid 1px silver;
+    border-collapse: separate;
+    border:solid 2px rgba(192, 192, 192, 0.849);
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:hsl(0, 9%, 96%);
+}
+input{
+  
+  background-color:hsl(0, 9%, 96%);
+  width: 93%;
+  border: solid 1px silver;
+  height: 45px;
+
+}
+img{
+
+  display: inline-flex;
+    border-radius:100px;
+    width: 400px;
+    height: 400px;
+    
+  }
+  
+   p{
+    display: block;
+    float: left;
+    margin-left: 10px;
+    padding-right: 20px;
+  } 

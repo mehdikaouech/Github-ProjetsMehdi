@@ -1,0 +1,87 @@
+input,label,option{
+  border: solid 1px silver;
+  border-collapse: separate;
+  border:solid 2px rgba(192, 192, 192, 0.849);
+
+    background-color:hsla(0, 10%, 96%, 0.829);
+    font-family:cursive;
+    font-size:20px;
+
+    color: rgb(15, 7, 7);
+    
+}
+select{
+    border: solid 1px silver;
+    border-collapse: separate;
+    border:solid 2px rgba(192, 192, 192, 0.849);
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:hsl(0, 9%, 96%);
+}
+img{
+
+display: inline-flex;
+  border-radius:100px;
+  width: 400px;
+  height: 400px;
+  
+}
+
+ p{
+  display: block;
+  float: left;
+  margin-left: 10px;
+  padding-right: 20px;
+} 
+.container{
+  margin-top: 200px;
+  margin-bottom: 250px;
+  margin-left: 250px;
+
+}
+textarea{
+    border: solid 1px silver;
+    border-collapse: separate;
+    border:solid 2px rgba(192, 192, 192, 0.849);
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:hsl(0, 9%, 96%);
+
+}
+.counter_input{
+
+  font-weight: 500;
+}
+
+.message{
+  background-color: #00d2ff;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+input.counter_input:invalid {
+  border:solid 2px rgba(185, 41, 41, 0.849);
+}
+input.counter_input:valid + span:before  {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  color:#0a0;
+  font-size: 1.5em;
+}	
+input.counter_input:invalid + span:before  {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  color:#a00;
+  font-size: 1.5em;
+}
+.counter_form_button:invalid{
+ color:rgb(170, 0, 0);
+
+}
+.counter_form:disabled,.counter_form
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}

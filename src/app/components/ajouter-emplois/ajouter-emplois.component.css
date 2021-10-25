@@ -1,0 +1,34 @@
+
+
+    p{
+      display: block;
+      float: left;
+      margin-left: 0px;
+      padding-right: 20px;
+    } 
+  
+      .imgmale{
+
+        display: inline-flex;
+          border-radius:50px;
+          width: 200px;
+          height: 200px;
+        
+        }
+        img{width:300px;
+          margin-left: 350px;    border: solid 1px silver;
+          }
+          .btn{
+           margin-bottom:0;
+          margin-left: 10px;
+            border: solid 1px silver; height: 45px;
+          }
+          select{
+              border: solid 1px silver;
+              border-collapse: separate;
+              border:solid 2px rgba(192, 192, 192, 0.849);
+                font-size: small;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color:hsl(0, 9%, 96%);
+          }
+          

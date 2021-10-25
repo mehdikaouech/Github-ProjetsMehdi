@@ -1,0 +1,131 @@
+
+/////////////////ts//
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { EventService } from 'src/app/services/event.service';
+
+@Component({
+  selector: 'app-ajouter-event',
+  templateUrl: './ajouter-event.component.html',
+  styleUrls: ['./ajouter-event.component.css']
+})
+export class AjouterEventComponent implements OnInit {
+
+
+    event:any= {};
+    eventForm!:FormGroup;
+    imagePreview:any;
+   
+     constructor(
+       private fb:FormBuilder,
+       private eventService:EventService,
+       private router:Router
+     ) { }
+   
+     ngOnInit() {
+       this.eventForm = this.fb.group({
+         title: [''],
+         description: [''],
+         address: [''],
+         eventDate: [''],
+         eventTime: [''],
+         image: ['']
+   
+       })
+     }
+     addEvent() {
+       console.log('here object',this.event);
+       this.eventService.addEvent(this.event, this.eventForm.value.image).subscribe(
+         ()=>{
+           console.log('event added successfully');
+           this.router.navigate(['/']);
+           
+         } 
+       )
+     }
+  
+       onImageSelected(event: Event) {
+        const file = (event.target as HTMLInputElement).files![0]
+        console.log('Here my file', file);
+        
+        this.eventForm.patchValue({ image: file });
+        this.eventForm.updateValueAndValidity();
+        const reader = new FileReader();
+        reader.onload = () => {
+          this.imagePreview = reader.result as string
+        }; reader.readAsDataURL(file);
+      }
+   }
+   /////////////////////html/////////////////
+<div class="courses" style="margin-top: 100px;">
+    <div class="section_background parallax-window" data-parallax="scroll"
+        data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+    <div class="">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact">
+                    Contact Info
+                    <h2 class="section_title text-center">Ajouter un evenement </h2>
+
+                    <div class="contact_info_container">
+                        <div class="container">
+                            <div class="row">
+
+                                Contact Form
+                                <div class="col-lg-12">
+                                    <div class="event_form">
+                                        <form #eventForm='ngForm' (ngSubmit)='addEvent()' class="comment_form">
+                                            <div class="form-group">
+                                                <div class="form_title">Titre</div>
+                                                <input type="text" [(ngModel)]='event.title'
+                                                    [ngModelOptions]="{standalone:true}" class="form-control"
+                                                    required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form_title">Description</div>
+                                                <input type="text" [(ngModel)]='event.description'
+                                                    [ngModelOptions]="{standalone:true}" class="form-control"
+                                                    required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form_title">Adresse</div>
+                                                <input type="email" [(ngModel)]='event.address'
+                                                    [ngModelOptions]="{standalone:true}" class="form-control"
+                                                    required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form_title">Date</div>
+                                                <input type="date" [(ngModel)]='event.eventDate'
+                                                    [ngModelOptions]="{standalone:true}" class="form-control"
+                                                    required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form_title">Horaire</div>
+                                                <input type="time" [(ngModel)]='event.eventTime'
+                                                    [ngModelOptions]="{standalone:true}" class="form-control"
+                                                    required="required">
+                                            </div>
+                    
+                                            <button type="button" (click)='filePicker.click()'
+                                                class="btn btn-success">Sélectionner image</button>
+                                            <div class="form-group">
+                                                <input style="visibility: hidden;" type="file" class="form-control"
+                                                    #filePicker (change)='onImageSelected($event)'  />
+                                            </div>
+                                            <img [src]="imagePreview" *ngIf="imagePreview" height="100px" width="100px">
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-info">Valider</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

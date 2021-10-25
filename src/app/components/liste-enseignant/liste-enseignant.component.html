@@ -1,0 +1,95 @@
+<!-- <div class=col-sm-10 style="margin-top: 200px; margin-bottom: 250px;margin-left: 200px ;margin-right: 50px;">
+   <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+      <div class="iq-card-header d-flex justify-content-between">
+         <div class="iq-header-title">
+            <h4 class="card-title">Liste des Enseignants</h4>
+            <div class="message">{{message}} </div>
+         </div>
+      </div>
+      <div class="iq-card-body">
+         <div class="table-responsive">
+            <table class="table mb-0 table-borderless">
+               
+
+               <tr>
+                  <th scope="col">Nom</th> 
+                  <th scope="col">Prenom</th> 
+                  <th scope="col"*ngIf="isAdmin()">Cin</th> 
+                  <th scope="col"*ngIf="isAdmin()">Telephone</th> 
+                  <th scope="col">Email</th>
+                  <th scope="col">LinkeIdin</th> 
+                  <th scope="col"*ngIf="isAdmin()">Action</th> 
+               </tr>
+               
+                  <tr *ngFor="let c of users">
+                     <td>{{c.nom}}</td>
+                     <td>{{c.prenom}}</td>
+                     <td *ngIf="isAdmin()">{{c.cin}}</td>
+                     <td  *ngIf="isAdmin()">{{c.telephone}}</td>
+                     <td>{{c.email}}</td>
+                     <td>{{c.linkedin}}</td>
+                    <td *ngIf="isAdmin()">
+                     <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)="editUser(c._id)"><i class="fa fa-eye"></i></button>
+                     <button type="button" class="btn btn-primary btn-sm mr-2"  (click)="deleteUser(c._id)"  > delete</button>
+                  </td>
+               
+               </tr> 
+              
+            </table>
+         </div>
+      </div>
+   </div>
+</div> -->
+
+<div class="page-content page-container  " id="page-content" style="margin-top: 90px; margin-left: 90px;" >
+   <div class="padding ">
+      
+       <div class="row container d-flex justify-content-center">
+           <div class="col-lg-12 ">
+            <h4 class="card-title">Liste des Enseignants</h4>
+               <div class="card">
+                   <div class="card-body">
+                    
+                        <div class="table-responsive">
+                           <table class="table table-striped">
+                               <thead>
+                                   <tr>
+                                       <th> Enseignant </th>
+                                       <th>  Nom </th>
+                                       <th> Prenom </th>
+                                       <th> Cin </th>
+                                       <th> Téléphone </th>
+                                       <th> Email </th>
+                                       <th> LinkeIdin </th>
+                                       <th> Action </th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                       
+                  <tr *ngFor="let c of users">
+                                       <td class="py-1"> <img src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="image"> </td>
+                                       <td>{{c.nom}}</td>
+                            
+                                          <td>{{c.prenom}}</td>
+                                       
+                                     <td>{{c.cin}}</td>
+                                     <td>{{c.telephone}}</td>
+                                     <td>{{c.email}}</td>
+                              
+                                     <td>{{c.linkedin}}</td>
+                                     <td >
+                                       <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)="editUser(c._id)"><i class="fa fa-eye"></i></button>
+                                       <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)="displayUser(c._id)"><i class="far fa-user"></i></button>
+   
+                                       <button type="button" class="btn btn-primary btn-sm mr-2"  (click)="deleteUser(c._id)"  > <i class="fa fa-trash"></i></button>
+                                    </td>
+                                 
+                               </tbody>
+                           </table>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>

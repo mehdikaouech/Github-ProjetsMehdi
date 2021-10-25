@@ -1,0 +1,19 @@
+table {
+    
+
+    border:solid 2px rgba(192, 192, 192, 0.849);
+      width: 70%;
+    
+    }
+    td{
+      
+      border: solid 1px rgb(192, 192, 192);
+    }
+    th {
+
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:   hsl(180, 55%, 88%);
+       color:black;
+  
+    }

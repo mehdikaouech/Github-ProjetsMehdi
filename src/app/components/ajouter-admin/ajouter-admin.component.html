@@ -1,0 +1,112 @@
+<div class="section_background parallax-window" data-parallax="scroll"
+data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+<div class="container" >
+    <div class="form-group">
+       <p> 
+           <img    class="imgmale" src="assets/images/adminn.jpg"  type= "button" alt="">
+            </p>
+   
+    <div class="row">
+       <div class="col ">
+          <form  [formGroup]="adminForm">
+                <div class="counter_form_title">{{title}}-admin <img class="imgUser" [src]="imagePreview" *ngIf="imagePreview">
+                </div>
+                <div class="form-group">
+                  <div class="message">{{message}} </div>
+         
+                 </div>
+       <input type="text" class="counter_input" id="nom" placeholder="nom:" [(ngModel)]="user.nom"
+       formControlName="nom"
+             >
+             <div *ngIf="adminForm.controls['nom'].invalid && (adminForm.controls['nom'].dirty || adminForm.controls['nom'].touched)">
+               <div  style="color: rgb(11, 145, 179);" *ngIf="adminForm.controls['nom'].invalid && (adminForm.controls['nom'].dirty || adminForm.controls['nom'].touched)">
+         
+              Saisir le nom  de l'Administrateur
+                  </div>
+         </div>
+       <input type="text" class="counter_input" id="prenom" placeholder="prénom:" [(ngModel)]="user.prenom"
+       formControlName="prenom">
+       <div *ngIf="adminForm.controls['prenom'].invalid && (adminForm.controls['prenom'].dirty || adminForm.controls['prenom'].touched)">
+         <div  style="color: rgb(11, 145, 179);" *ngIf="adminForm.controls['prenom'].invalid && (adminForm.controls['prenom'].dirty || adminForm.controls['prenom'].touched)">
+   
+        Saisir le prenom de l'Administrateur
+            </div>
+         </div>
+       <input type="email" class="counter_input" id="email" placeholder="votre email:"  required formControlName="email" placeholder="mail@serveur.com" [(ngModel)]="user.email"
+          >  <div *ngIf="adminForm.controls['email'].invalid && (adminForm.controls['email'].dirty || adminForm.controls['email'].touched)">
+             <div  style="color: rgb(11, 145, 179);" *ngIf="adminForm.controls['email'].invalid && (adminForm.controls['email'].dirty || adminForm.controls['email'].touched)">
+       
+               L'Email est Obligatoire
+                </div>
+       </div>
+          
+          <input type="password" class="counter_input" id="password" placeholder="votre Mot de Passe:" [(ngModel)]="user.pwd" 
+          required formControlName="pwd"  placeholder="Mot De Passe:" >
+          <div *ngIf="adminForm.controls['pwd'].invalid && (adminForm.controls['pwd'].dirty || adminForm.controls['pwd'].touched)">
+            <div  style="color: rgb(11, 145, 179);" *ngIf="adminForm.controls['pwd'].invalid && (adminForm.controls['pwd'].dirty || adminForm.controls['pwd'].touched)">
+         
+            Vérifier Le Mot De Passe  
+               </div>
+         </div>
+          <input type="text" class="counter_input" id="LinkedIn" placeholder="votre LinkedIn:" [(ngModel)]="user.LinkedIn"
+          [ngModelOptions]="{standalone: true}">
+       <input type="text"  class="counter_input" id="telephone" placeholder="Phone:" [(ngModel)]="user.telephone"
+       formControlName="telephone">
+       <div *ngIf="adminForm.controls['telephone'].invalid && (adminForm.controls['telephone'].dirty || adminForm.controls['telephone'].touched)">
+         <div  style="color: rgb(11, 145, 179);" *ngIf="adminForm.controls['telephone'].invalid && (adminForm.controls['telephone'].dirty || adminForm.controls['telephone'].touched)">
+      
+         Vérifier le numéro de telephone
+            </div>
+      </div>
+          <input type="number" class="counter_input" id="cin" placeholder="Cin:" required  formControlName="cin" minlength="8"  [(ngModel)]="user.cin"
+         ><div *ngIf="adminForm.controls['cin'].invalid && (adminForm.controls['cin'].dirty || adminForm.controls['cin'].touched)">
+            <div  style="color: rgb(11, 145, 179);" *ngIf="adminForm.controls['cin'].invalid && (adminForm.controls['cin'].dirty || adminForm.controls['cin'].touched)">
+      
+           Vérifier le Numéro du carte d'identité  
+               </div>
+   
+         
+      </div>
+ 
+       <button class="counter_form_button" (click)="addAdmin()"   [disabled]="adminForm.invalid" >Ajouter</button>
+     </form>
+    </div>
+    </div>
+</div>
+
+<div class="Liste">
+       
+   <div class="iq-header-title" style="margin-left: 290px;"  >
+      <h4 class="card-title">Liste des Administrateurs</h4>
+   </div> 
+  
+
+</div>
+<div class="iq-card-body" style="margin-left: 290px;">
+  <div class="table">
+     <table class="table mb-0 table-borderless">
+        
+           <tr>
+              <th scope="col">Nom</th> 
+              <th scope="col">Prenom</th> 
+              <th scope="col  ">Action</th> 
+           </tr>
+           
+              <tr *ngFor="let c of admin">
+                 <td>{{c.nom}}</td>
+                 <td>{{c.prenom}}</td>
+           <td style="width: 200px;">
+        
+                <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#myModal" (click)="displayUser(c._id)"><i class="far fa-user"></i></button>
+                <button type="button"    class="btn btn-primary btn-sm mr-2" data-toggle="modal"  (click)="editAdmin(c._id)"> <i class="fa fa-eye"></i></button>
+                 <button type="button" class="btn btn-primary btn-sm mr-2"  (click)="deleteUser(c._id)"  > <i class="fa fa-trash"></i></button>
+               </td>
+           </tr> 
+     </table>
+  </div>
+</div>
+
+</div>
+
+
+

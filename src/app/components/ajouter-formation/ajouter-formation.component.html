@@ -1,0 +1,33 @@
+
+<div class="container "  style="margin-left: 25%;">
+   <div class="form-group ">
+      <p> 
+         <img    class="imgmale" src="assets/images/formation.jpg"  type= "button" alt="">
+          </p>
+      
+   <div class="row">
+
+      <div class="col ">
+         <form  [formGroup]="formationForm">
+               <div class="counter_form_title">{{title}}-Formation </div>
+               <div class="message">{{message}} </div>
+   <label  class="counter col-lg-2" style="margin-bottom: 25px;">Nom du formation : </label> <input type="text" style="margin-bottom: 20px;" class="counter_input col-lg-6" id="nom" placeholder="nom:" [(ngModel)]="formation.nom" formControlName="nom"
+        ><br>
+         <div *ngIf="formationForm.controls['nom'].invalid && (formationForm.controls['nom'].dirty || formationForm.controls['nom'].touched)">
+            <div  style="color: rgb(11, 145, 179); margin-left: 130px;" *ngIf="formationForm.controls['nom'].invalid && (formationForm.controls['nom'].dirty || formationForm.controls['nom'].touched)">
+      
+           Saisir le nom du formation
+               </div>
+      </div>
+         <label  class="counter col-lg-2">Description : </label><input type="text" class="counter_input col-lg-6" id="description" placeholder="Description" [(ngModel)]="formation.description"
+         [ngModelOptions]="{standalone: true}">
+
+      <button class="counter_form_button col-8" (click)="addFormation()"   [disabled]="formationForm.invalid">ajouter</button>
+    </form>
+   </div>
+   </div>
+</div>
+</div>
+
+
+

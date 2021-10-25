@@ -1,0 +1,45 @@
+h3{
+  font-size:25px;
+  padding-bottom: 10px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-decoration-line: underline ;
+  
+}
+dt ,dd{
+    size: 20px; ;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: solid silver 3px;
+   text-align: left;
+align-content: center;
+}
+dd{
+  color: black;
+ font-size: 15px;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2{
+  font-size: 40px;
+  text-decoration: blue;
+  font-family: cursive;
+  margin-left:320px;
+  padding-bottom:  40px;
+}
+
+
+.counter_form_title{
+  font-size: 30px;
+
+margin-left:350px;
+padding-bottom:  30px;
+
+
+}
+.imgmale{
+
+  display: inline-flex;
+    border-radius:80px;
+    width: 300px;
+    height: 300px;
+    
+  }

@@ -1,0 +1,20 @@
+
+<div class="events" style="margin-top: 70px;">
+   <div class="container">
+       <div class="row">
+           <div class="col">
+               <div class="section_title_container text-center" >
+                   <div > <h4 class="card-title">Les Emplois du temps de l'Académie</h4></div>
+               </div>
+           </div>
+       </div>
+ <div class="row events_row">
+
+           <div *ngFor='let e of emplois 'class="col-lg-4 event_col">
+               <app-emplois [emplois]='e'></app-emplois>
+           </div> 
+
+
+       </div>
+    </div>
+</div>

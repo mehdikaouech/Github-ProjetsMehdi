@@ -1,0 +1,116 @@
+input{
+    border: solid 1px silver;
+    border-collapse: separate;
+    border:solid 2px rgba(192, 192, 192, 0.849);
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:hsl(0, 9%, 96%);
+      
+}
+select{
+    border: solid 1px silver;
+    border-collapse: separate;
+    border:solid 2px rgba(192, 192, 192, 0.849);
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:hsl(0, 9%, 96%);
+}
+.imgmale{
+
+display: inline-flex;
+  border-radius:100px;
+  width: 400px;
+  height: 400px;
+  
+}
+.imgUser{
+  
+  display: inline;
+    width: 100px;
+    height: 100px;
+    margin-right: 100px;
+    border-image-repeat: inherit;
+
+  }
+  .p1{
+    display: block;
+  float: right;
+  }
+
+ p{
+  display: block;
+  float: left;
+  margin-left: 10px;
+  padding-right: 20px;
+} 
+.container{
+    margin-top: 200px;
+    margin-bottom: 250px;
+    margin-left: 250px;
+  
+  }
+  body
+  {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background: #773333;
+    color: #a5a5a5;
+  }
+
+  .message{
+    background-color: #00d2ff;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+  }
+  table {
+    border-collapse: separate;
+    border:solid 2px rgba(192, 192, 192, 0.849);
+      width: 80%;
+      tab-size: 30cm;
+  
+      margin-left: 150px;
+    }
+    td{
+      border: solid 1px silver;
+    }
+    th {
+      font-weight: bold;
+      height: 50px;
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:hsl(0, 9%, 96%);
+       color:black;
+  
+    }
+    .Liste{
+      margin-left: 150px;
+      margin-top: 100px;
+    }
+    
+input.counter_input:invalid {
+  border:solid 2px rgba(185, 41, 41, 0.849);
+}
+input.counter_input:valid + span:before  {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  color:#0a0;
+  font-size: 1.5em;
+}	
+input.counter_input:invalid + span:before  {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  color:#a00;
+  font-size: 1.5em;
+}
+.counter_form_button:invalid{
+ color:rgb(170, 0, 0);
+
+}
+.counter_form:disabled,.counter_form
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
